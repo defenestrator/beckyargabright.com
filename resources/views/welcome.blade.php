@@ -97,7 +97,7 @@
                 </div>
                 <div class="links" style="margin-bottom:24px;">
                     <a href="#">Deep Tissue</a>
-                    <a href="#">Aromatherapy</a>
+                    <a href="#">Relaxations</a>
                     <a href="#">Hot Stones</a>
 
                 </div>
