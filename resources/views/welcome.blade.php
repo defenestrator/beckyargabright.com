@@ -52,15 +52,15 @@
                 color: #faf3ff;
                 padding: 0 4px;
                 font-size: 13px;
-                font-weight: 300;
-                letter-spacing: .01rem;
+                font-weight: 600;
+                letter-spacing: .05rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
             .address > a {
-                color: #a7997c;
+                color: #90d0fa;
                 font-size: 13px;
-                font-weight: 100;
+                font-weight: 300;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
