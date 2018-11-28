@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -45,11 +45,11 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 64px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #faf3ff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -57,7 +57,14 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
+            .address > a {
+                color: #f6b636;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -81,11 +88,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
+                    <img title="Becky Argabright, Massage Therapy" alt="Becky Argabright, Massage Therapy" src="/images/becky-logo-2.png">
                     {{ config('app.name') }}
                 </div>
-
+                <div class="address">
+                    <a href="#address">Holistic Therapy Center<br>1412 W. Washington St.<br>Boise, ID 83702<br>1 (208) 371-5719</a>
+                </div>
+                <hr>
                 <div class="links">
-                    <a href="/contact">Contact</a>
+                    <a href="#">Deep Tissue</a>
+                    <a href="#">Aromatherapy</a>
+                    <a href="#">Hot Stones</a>
 
                 </div>
             </div>
