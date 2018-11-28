@@ -96,8 +96,8 @@
                     <a href="#address">1412 W. Washington St.<br>Boise, ID 83702</a><br><a href="tel:12083715719">1 (208) 371-5719</a>
                 </div>
                 <div class="links" style="margin-bottom:24px;">
-                    <a href="#">Deep Tissue</a>
-                    <a href="#">Relaxations</a>
+                    <a href="#">Deep Tissue | </a>
+                    <a href="#">Relaxation | </a>
                     <a href="#">Hot Stones</a>
 
                 </div>
