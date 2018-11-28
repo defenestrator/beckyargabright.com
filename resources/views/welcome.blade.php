@@ -56,6 +56,7 @@
                 letter-spacing: .05rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                margin-bottom: 30px;
             }
             .address > a {
                 color: #90d0fa;
@@ -91,11 +92,10 @@
                     <div style="margin-top:12px;"><img style="width:50%; padding-top:12px;" title="Becky Argabright, Massage Therapy" alt="Becky Argabright, Massage Therapy" src="/images/becky-logo.png"></div>
                     <div>{{ config('app.name') }}</div>
                 </div>
-                <div class="address">
+                <div class="address" style="margin-bottom:20px;">
                     <a href="#address">Holistic Therapy Center<br>1412 W. Washington St.<br>Boise, ID 83702</a><br><a href="tel:12083715719">1 (208) 371-5719</a>
                 </div>
-                <hr>
-                <div class="links">
+                <div class="links" style="margin-bottom:24px;">
                     <a href="#">Deep Tissue</a>
                     <a href="#">Aromatherapy</a>
                     <a href="#">Hot Stones</a>
