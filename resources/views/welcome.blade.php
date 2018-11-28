@@ -50,17 +50,17 @@
 
             .links > a {
                 color: #faf3ff;
-                padding: 0 25px;
+                padding: 0 4px;
                 font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
+                font-weight: 300;
+                letter-spacing: .01rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
             .address > a {
-                color: #f6b636;
+                color: #a7997c;
                 font-size: 13px;
-                font-weight: 600;
+                font-weight: 100;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -89,7 +89,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     <img title="Becky Argabright, Massage Therapy" alt="Becky Argabright, Massage Therapy" src="/images/becky-logo-2.png">
-                    {{ config('app.name') }}
+                    <p>{{ config('app.name') }}</p>
                 </div>
                 <div class="address">
                     <a href="#address">Holistic Therapy Center<br>1412 W. Washington St.<br>Boise, ID 83702<br>1 (208) 371-5719</a>
