@@ -67,7 +67,7 @@
                 text-transform: uppercase;
             }
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 16px;
             }
         </style>
     </head>
@@ -89,11 +89,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <div style="margin-top:12px;"><img style="width:50%; padding-top:12px;" title="Becky Argabright, Massage Therapy" alt="Becky Argabright, Massage Therapy" src="/images/becky-logo.png"></div>
+                    <div style="margin-top:12px; padding-top:12px;"><img style="width:50%;" title="Becky Argabright, Massage Therapy" alt="Becky Argabright, Massage Therapy" src="/images/becky-logo.png"></div>
                     <div>{{ config('app.name') }}</div>
                 </div>
                 <div class="address" style="margin-bottom:20px;">
-                    <a href="#address">Holistic Therapy Center<br>1412 W. Washington St.<br>Boise, ID 83702</a><br><a href="tel:12083715719">1 (208) 371-5719</a>
+                    <a href="#address">1412 W. Washington St.<br>Boise, ID 83702</a><br><a href="tel:12083715719">1 (208) 371-5719</a>
                 </div>
                 <div class="links" style="margin-bottom:24px;">
                     <a href="#">Deep Tissue</a>
