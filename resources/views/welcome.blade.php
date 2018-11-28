@@ -88,7 +88,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img title="Becky Argabright, Massage Therapy" alt="Becky Argabright, Massage Therapy" src="/images/becky-logo-2.png">
+                    <img title="Becky Argabright, Massage Therapy" alt="Becky Argabright, Massage Therapy" src="/images/becky-logo.png">
                     <p>{{ config('app.name') }}</p>
                 </div>
                 <div class="address">
