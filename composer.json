@@ -1,16 +1,21 @@
 {
-    "name": "laravel/laravel",
+    "name": "defenestrator/beckyargabright",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Becky Argabright, Certified Massage Therapist",
     "keywords": [
-        "framework",
-        "laravel"
+        "therapeutic massage",
+        "boise",
+        "idaho",
+        "cbd",
+        "deep tissue",
+        "hot stones",
+        "aromatherapy"
     ],
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.7.*",
+        "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
@@ -45,7 +50,7 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
