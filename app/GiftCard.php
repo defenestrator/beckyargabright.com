@@ -19,6 +19,7 @@ class GiftCard extends Model
         'to_email',
         'from_email',
         'background',
+        'mailing_address',
         'expires',
         'minutes',
         'price'
