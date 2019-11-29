@@ -15,8 +15,7 @@ class CreateGiftCardsTable extends Migration
     {
         Schema::create('gift_cards', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('background')->nullable();
             $table->string('qr')->nullable();
             $table->string('to_name')->nullable();
@@ -26,7 +25,7 @@ class CreateGiftCardsTable extends Migration
             $table->string('mailing_address')->nullable();
             $table->unsignedInteger('minutes')->nullable();
             $table->unsignedInteger('price')->nullable();
-            $table->date('expires')->nullable();
+            $table->date('expires');
             $table->timestamps();
         });
     }

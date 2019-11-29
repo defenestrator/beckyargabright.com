@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\GiftCard;
 use Illuminate\Http\Request;
+use Auth;
 
 class GiftCardController extends Controller
 {
@@ -14,7 +15,7 @@ class GiftCardController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -22,9 +23,9 @@ class GiftCardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return view('giftcards.new');
     }
 
     /**
@@ -35,7 +36,51 @@ class GiftCardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        if (Auth::check()) {
+            $user = User::whereEmail($request->from_email)->get();
+            if ($user()->id == 1 && $user->email == 'epipha44@gmail.com') {
+                return GiftCard::create($request->all);
+            }
+
+
+
+            $request->validate([
+                'to_name'  => 'required|min:1|max:48',
+                'to_email' => 'email',
+                'from_name'  => 'required|min:1|max:48',
+                'from_email' => 'email|required',
+                'hours'  => 'integer|numeric|min:60|max:600|required',
+            ]);
+
+            return GiftCard::create([
+                'user_id' => $user->id,
+                'to_name'  => $request->to_name,
+                'to_email' => $request->to_email,
+                'from_name'  => $request->from_name,
+                'from_email' => $request->from_email,
+                'hours'  => $request->hours
+                ]
+            );
+
+        }
+        // else...validate that shit, boi.
+        $request->validate([
+            'to_name'  => 'required|min:1|max:48',
+            'to_email' => 'email',
+            'from_name'  => 'required|min:1|max:48',
+            'from_email' => 'email|required',
+            'hours'  => 'integer|numeric|min:60|max:600|required',
+        ]);
+
+
+        return GiftCard::create([
+            'to_name'  => $request->to_name,
+            'to_email' => $request->to_email,
+            'from_name'  => $request->from_name,
+            'from_email' => $request->from_email,
+            'hours'  => $request->hours]
+        );
     }
 
     /**

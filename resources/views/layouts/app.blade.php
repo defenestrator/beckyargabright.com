@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-laravel navbar-expand-md navbar-dark shadow-sm">
+        <nav class="navbar navbar-dark text-uppercase navbar-expand-md">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img title="Becky Argabright, Boise Idaho Massage Therapy"
                 alt="Becky Argabright, Boise Idaho Massage Therapy"

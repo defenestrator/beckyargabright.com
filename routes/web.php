@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/giftcards/new', 'GiftCardController@create')->name('giftcards.create');
+Route::post('/giftcards', 'GiftCardController@store')->name('giftcards.store');
+Route::get('/giftcards', 'GiftCardController@index');
