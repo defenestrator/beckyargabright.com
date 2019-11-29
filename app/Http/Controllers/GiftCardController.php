@@ -16,7 +16,7 @@ class GiftCardController extends Controller
      */
     public function index()
     {
-
+        return view('giftcards.index', ['cards' => GiftCard::all()]);
     }
 
     /**
@@ -109,9 +109,9 @@ class GiftCardController extends Controller
      * @param  \App\GiftCard  $giftCard
      * @return \Illuminate\Http\Response
      */
-    public function show(GiftCard $giftCard)
+    public function show($qr, GiftCard $giftCard)
     {
-        //
+        return view('giftcards.show', ['card' => $giftCard->where('qr', '=', $qr)->get()]);
     }
 
     /**

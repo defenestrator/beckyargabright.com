@@ -3,13 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\HasExpirationDate;
-// use App\Traits\HasQRCode;
+use App\Traits\IsGiftCardy;
 
 class GiftCard extends Model
 {
-    use HasExpirationDate;
-    // use HasQRCode;
+    use IsGiftCardy;
     /**
      * The fillable fields, yo.
      *

@@ -14,9 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        if (Auth::check() && Auth::user()->id == 1 && Auth::user()->email == 'epipha44@gmail.com') {
-            return view('admin');
-        }
-        return view('welcome');
+        $this->middleware('admin');
+        return view('admin');
     }
 }
