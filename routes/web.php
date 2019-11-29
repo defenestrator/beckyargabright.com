@@ -15,9 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes(['verify' => true]);
+Route::middleware(['verified'])->group( function(){
+    Route::get('/home', 'HomeController@index')->name('home');
+});
 
 Route::get('/giftcards/new', 'GiftCardController@create')->name('giftcards.create');
 Route::post('/giftcards', 'GiftCardController@store')->name('giftcards.store');

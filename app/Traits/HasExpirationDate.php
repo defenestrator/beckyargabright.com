@@ -10,8 +10,6 @@ trait HasExpirationDate
     {
         parent::boot();
 
-
-
         static::creating(function ($model) {
             $expiry = now()->addYears(5)->format('Y-m-d');
             return $model->expires = $expiry;
