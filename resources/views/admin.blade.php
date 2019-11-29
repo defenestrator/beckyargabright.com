@@ -4,6 +4,20 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-6 offset-md-4">
+            <h3>Show All Gift Cards:</h3>
+            </div>
+        </div>
+        <div class="row">
+<div class="col-md-6 offset-md-4">
+        <a href ="{{ route('giftcards.index') }}" class="btn btn-primary">
+                {{ __('Show All Gift Cards') }}
+        </a>
+        </div>
+    </div></div>
+        <hr>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 offset-md-4">
             <h3>Print a Blank Gift Card:</h3>
             </div>
         </div>
@@ -20,15 +34,10 @@
             </div>
         </form>
         <hr>
-        <div class="col-md-6 offset-md-4">
-        <a href ="{{ route('giftcards.index') }}" class="btn btn-primary">
-                {{ __('Show All Gift Cards') }}
-        </a>
-        </div>
-        <hr>
+
         <div class="row">
             <div class="col-md-6 offset-md-4">
-            <h3>Or fill it out now:</h3>
+            <h3>Or fill one out now:</h3>
             </div>
         </div>
         <hr>
