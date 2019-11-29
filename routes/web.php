@@ -20,10 +20,9 @@ Route::middleware(['verified'])->group( function(){
     Route::get('/home', 'HomeController@index')->name('home');
 });
 
-Route::get('giftcards/{qr}', 'GiftCardController@show')->name('giftcards.show');
 Route::get('/giftcards/new', 'GiftCardController@create')->name('giftcards.create');
+Route::get('giftcards/{qr}', 'GiftCardController@show')->name('giftcards.show');
 Route::post('/giftcards', 'GiftCardController@store')->name('giftcards.store');
-
 
 Route::middleware(['admin'])->group( function() {
     Route::post('giftcards/blank', 'GiftCardController@blank')->name('giftcards.blank');
