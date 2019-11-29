@@ -42,10 +42,13 @@
                         <a class="nav-link" href="{{ route('giftcards.create') }}">Gift Cards</a>
                     </li>
                     <!-- Admin ONLY links -->
-                     @if (Auth::check() == true && Auth::user()->id == 1 && Auth::user()->email == 'epipha44@gmail.com')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin') }}">Admin</a>
-                    </li>
+                     @if (  Auth::check() == true
+                            && Auth::user()->id == 1
+                            && Auth::user()->email == 'epipha44@gmail.com'
+                        )
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin') }}">Admin</a>
+                        </li>
                     @endif
                     <!-- Authentication Links -->
                     @guest
