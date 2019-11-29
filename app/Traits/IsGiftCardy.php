@@ -14,7 +14,7 @@ trait IsGiftCardy
         static::creating(function ($model) {
             $hash = md5($model->to_name . now());
             $model->qr = $hash;
-            $filename = $hash .'png';
+            $filename = $hash .'.png';
 
 
             $url = 'https://beckyargabright.com/giftcards/' . $hash;
