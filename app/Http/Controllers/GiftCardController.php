@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\GiftCard;
+use App\User;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -18,6 +19,17 @@ class GiftCardController extends Controller
 
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blank()
+    {
+        if (Auth::check() && Auth::user()->id == 1 && Auth::user()->email == 'epipha44@gmail.com') {
+            return GiftCard::create();
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -36,22 +48,29 @@ class GiftCardController extends Controller
      */
     public function store(Request $request)
     {
-
         if (Auth::check()) {
-            $user = User::whereEmail($request->from_email)->get();
-            if ($user()->id == 1 && $user->email == 'epipha44@gmail.com') {
-                return GiftCard::create($request->all);
-            }
 
-
+            $user = Auth::user();
 
             $request->validate([
                 'to_name'  => 'required|min:1|max:48',
                 'to_email' => 'email',
                 'from_name'  => 'required|min:1|max:48',
-                'from_email' => 'email|required',
+                'from_email' => 'email',
                 'hours'  => 'integer|numeric|min:60|max:600|required',
             ]);
+
+            if ($user->id == 1 && $user->email == 'epipha44@gmail.com') {
+
+                return GiftCard::create([
+                    'user_id' => $user->id,
+                    'to_name'  => $request->to_name,
+                    'to_email' => $request->to_email,
+                    'from_name'  => $request->from_name,
+                    'from_email' => $request->from_email,
+                    'minutes'  => $request->hours
+                ]);
+            }
 
             return GiftCard::create([
                 'user_id' => $user->id,
@@ -69,7 +88,7 @@ class GiftCardController extends Controller
             'to_name'  => 'required|min:1|max:48',
             'to_email' => 'email',
             'from_name'  => 'required|min:1|max:48',
-            'from_email' => 'email|required',
+            'from_email' => 'email',
             'hours'  => 'integer|numeric|min:60|max:600|required',
         ]);
 
@@ -79,7 +98,8 @@ class GiftCardController extends Controller
             'to_email' => $request->to_email,
             'from_name'  => $request->from_name,
             'from_email' => $request->from_email,
-            'hours'  => $request->hours]
+            'minutes'  => $request->hours
+            ]
         );
     }
 

@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\HasExpirationDate;
+// use App\Traits\HasQRCode;
 
 class GiftCard extends Model
 {
     use HasExpirationDate;
+    // use HasQRCode;
     /**
      * The fillable fields, yo.
      *

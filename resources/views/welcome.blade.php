@@ -7,9 +7,6 @@
             <div>
                 <div>
                     <div class="content">
-                        <div class="links" style="margin-bottom:24px;">
-                            <a href="{{ route('giftcards.create') }}">Gift Cards</a>
-                        </div>
                         <div class="title m-b-md">
                             <div style="margin-top:12px; padding-top:12px;"><img style="width:50%;" title="Becky Argabright, Boise Idaho Massage Therapy" alt="Becky Argabright, Boise Idaho Massage Therapy" src="/images/becky-logo.png"></div>
                             <div>Boise's Best Massage</div>
