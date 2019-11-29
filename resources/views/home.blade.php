@@ -13,7 +13,7 @@
                             You are logged in!
                         </div>
                     @endif
-
+                    The dashboard is boring for now, try clicking more stuff up top.
                 </div>
             </div>
         </div>
